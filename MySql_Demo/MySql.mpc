@@ -1,0 +1,10 @@
+project(Mysql){
+  exename = MySql 
+  exeout  = ./bin
+  libout  = ./lib
+
+  includes += ./mysql
+  libpaths += ./mysql
+
+  lit_libs += libmysql
+}
