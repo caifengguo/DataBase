@@ -1,0 +1,22 @@
+
+project(gp) :aceexe{
+  exename = gp
+  exeout = $(FARS_V2x5_ROOT)\bin
+
+  includes += $(THIRD_PART_ROOT)/GP/include
+  libpaths += $(THIRD_PART_ROOT)/GP/X64
+  
+  includes += $(OCI_ROOT)/include
+  libs     += oraocci11
+  
+  lit_libs += libeay32
+  lit_libs += libintl
+  lit_libs += libpq
+  lit_libs += ssleay32
+  
+  
+  specific(prop:microsoft){
+       x64::libpaths += $(OCI_ROOT)\x64
+     Win32::libpaths += $(OCI_ROOT)\Win32
+     }
+}

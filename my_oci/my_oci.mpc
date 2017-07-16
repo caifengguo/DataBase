@@ -1,0 +1,11 @@
+project (my_oci):orbsvcsexe,naming,iortable,svc_utils,utils,strategies,messaging{
+   exename   = my_oci
+   exeout    = D:\OCI\bin
+   includes += $(OCI_ROOT)/include
+   
+   specific(prop:microsoft) {
+     x64::libpaths += $(OCI_ROOT)/x64
+     Win32::libpaths += $(OCI_ROOT)/Win32
+  }
+   libs  += oraocci11
+}
